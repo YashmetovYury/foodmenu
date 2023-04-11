@@ -1,0 +1,63 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import Card from "../components/Card.astro";
+---
+
+<Layout title="Меню Кафе.">
+
+	<body>
+		<Header />
+		<div class="tw-col-span-1">
+			<h1>Дессерт</h1>
+		</div>
+
+        <ul role="list" class="link-card-grid">
+			
+			<Card
+				href="pizza1.png"
+				title="Дессерт-1"
+                price="100"
+				body="###"
+			/>
+			<Card
+				href="pizza1.png"
+				title="Дессерт-2"
+                price="100"
+				body="###."
+			/>
+			<Card
+				href="pizza1.png"
+				title="Дессерт-3"
+                price="100"
+
+				body="###."
+			/>
+			
+		</ul>
+		<Footer />
+	</body>
+</Layout>
+
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Courier+Prime&family=Lato&family=Shrikhand&display=swap');
+
+body {
+    margin: 0;
+    text-align: center;
+    font-family: 'Lato', sans-serif;
+    color: #653A1E;
+}
+	h1 {
+		font-size: 2.5rem;
+		font-weight: 600;
+		margin: 0;
+	}
+	.link-card-grid {
+		display: grid;
+		grid-template-columns: repeat(auto-fit, minmax(12ch, 1fr));
+		gap: 1rem;
+		padding: 1rem;
+	}
+</style>
